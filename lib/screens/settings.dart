@@ -22,9 +22,10 @@ class Settings extends StatelessWidget {
               children: <Widget>[
                 Text('Units'),
                 DropdownButton<String>(
-                  value: 'Imperial',
+                  value: settingsProvider.unit,
                   onChanged: (String value) {
                     //TODO UPDATE
+                    settingsProvider.setUnit(value);
                   },
                   items: <String>['Imperial', 'Metric']
                       .map<DropdownMenuItem<String>>((String value) {
@@ -53,7 +54,7 @@ class Settings extends StatelessWidget {
                         label: Text('Swix',
                             style: TextStyle(
                                 color: Theme.of(context).accentColor)),
-                        selected: false,
+                        selected: (settingsProvider.waxLines.contains('Swix')) ? true : false,
                         onSelected: (bool value) {
                           //TODO
                         },
