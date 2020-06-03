@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context){
+      create: (BuildContext context) {
         return SettingsProvider();
       },
       child: MaterialApp(
@@ -27,5 +27,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

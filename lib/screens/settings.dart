@@ -54,12 +54,14 @@ class Settings extends StatelessWidget {
                         label: Text('Swix',
                             style: TextStyle(
                                 color: Theme.of(context).accentColor)),
-                        selected: (settingsProvider.waxLines.contains('Swix')) ? true : false,
+                        selected: (settingsProvider.waxLines.contains('Swix'))
+                            ? true
+                            : false,
                         onSelected: (bool value) {
                           //TODO
-                          if(value){
+                          if (value) {
                             settingsProvider.addWaxLine('Swix');
-                          }else{
+                          } else {
                             settingsProvider.removeWaxLine('Swix');
                           }
                         },
@@ -68,12 +70,14 @@ class Settings extends StatelessWidget {
                         label: Text('Toko',
                             style: TextStyle(
                                 color: Theme.of(context).accentColor)),
-                        selected: (settingsProvider.waxLines.contains('Toko')) ? true : false,
+                        selected: (settingsProvider.waxLines.contains('Toko'))
+                            ? true
+                            : false,
                         onSelected: (bool value) {
                           //TODO
-                          if(value){
+                          if (value) {
                             settingsProvider.addWaxLine('Toko');
-                          }else{
+                          } else {
                             settingsProvider.removeWaxLine('Toko');
                           }
                         },
