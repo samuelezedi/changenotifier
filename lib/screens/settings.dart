@@ -31,7 +31,7 @@ class Settings extends StatelessWidget {
               ],
             ),
           ),
-
+          SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Row(
