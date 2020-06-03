@@ -1,9 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsProvider with ChangeNotifier {
   String _unit;
   List<String> _waxLines;
+  SharedPreferences prefs;
 
   SettingsProvider() {
     _unit = "Imperial";
@@ -37,5 +39,19 @@ class SettingsProvider with ChangeNotifier {
       _waxLines.remove(waxLine);
       notifyListeners();
     }
+  }
+
+  void savePrefs() async {
+    prefs = await SharedPreferences.getInstance();
+    prefs.setString('units', _unit);
+    prefs.setStringList('waxLines', _waxLines);
+  }
+
+  void loadPrefs() async {
+    prefs = await SharedPreferences.getInstance();
+    String units = prefs.getString('units');
+    List<String> waxLines = prefs.getStringList('waxLines');
+    if(units != null) setUnit(units);
+    if(waxLines != null) _setWaxLines(waxLines);
   }
 }
