@@ -31,9 +31,11 @@ class Settings extends StatelessWidget {
               ],
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text('Wax Lines'),
                 Container(child: Wrap(
