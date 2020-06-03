@@ -57,6 +57,11 @@ class Settings extends StatelessWidget {
                         selected: (settingsProvider.waxLines.contains('Swix')) ? true : false,
                         onSelected: (bool value) {
                           //TODO
+                          if(value){
+                            settingsProvider.addWaxLine('Swix');
+                          }else{
+                            settingsProvider.removeWaxLine('Swix');
+                          }
                         },
                       ),
                       FilterChip(
