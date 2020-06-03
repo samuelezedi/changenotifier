@@ -68,9 +68,14 @@ class Settings extends StatelessWidget {
                         label: Text('Toko',
                             style: TextStyle(
                                 color: Theme.of(context).accentColor)),
-                        selected: true,
+                        selected: (settingsProvider.waxLines.contains('Toko')) ? true : false,
                         onSelected: (bool value) {
                           //TODO
+                          if(value){
+                            settingsProvider.addWaxLine('Toko');
+                          }else{
+                            settingsProvider.removeWaxLine('Toko');
+                          }
                         },
                       ),
                     ],
