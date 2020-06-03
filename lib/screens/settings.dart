@@ -16,7 +16,13 @@ class Settings extends StatelessWidget {
                 value: 'Imperial',
                 onChanged: (String value) {
                   //TODO UPDATE
+
                 },
+                items: <String>['Imperial', 'Metric']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      value: value, child: Text(value));
+                }).toList(),
               )
             ],
           )
