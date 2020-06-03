@@ -31,23 +31,34 @@ class Settings extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            children: <Widget>[
-              Text('Wax Lines'),
-              Container(child: Wrap(
-                spacing: 5.0,
-                runSpacing: 5.0,
-                children: <Widget>[
-                  FilterChip(
-                    label: Text('Swix',style: TextStyle(color: Theme.of(context).accentColor)),
-                    selected: false,
-                    onSelected: (bool value) {
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: Row(
+              children: <Widget>[
+                Text('Wax Lines'),
+                Container(child: Wrap(
+                  spacing: 5.0,
+                  runSpacing: 5.0,
+                  children: <Widget>[
+                    FilterChip(
+                      label: Text('Swix',style: TextStyle(color: Theme.of(context).accentColor)),
+                      selected: false,
+                      onSelected: (bool value) {
+                        //TODO
+                      },
+                    ),
+                    FilterChip(
+                      label: Text('Toko',style: TextStyle(color: Theme.of(context).accentColor)),
+                      selected: true,
+                      onSelected: (bool value) {
+                        //TODO
+                      },
+                    ),
 
-                    },
-                  )
-                ],
-              ),)
-            ],
+                  ],
+                ),)
+              ],
+            ),
           )
         ],
       ),
