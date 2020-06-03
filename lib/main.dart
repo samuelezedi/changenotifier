@@ -1,3 +1,4 @@
+import 'package:changenotifs/providers/settings_provider.dart';
 import 'package:changenotifs/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (BuildContext context){
-        
+        return SettingsProvider();
       },
       child: MaterialApp(
         title: 'Max App',
